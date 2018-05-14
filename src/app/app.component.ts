@@ -15,4 +15,9 @@ export class AppComponent {
         { id: 3, name: 'course 3'}
       ];
   }
+
+  // prevents re-rendering of already rendered objects in the DOM
+  trackCourse(index, course) {
+    return course ? course.id : undefined;
+  }
 }
